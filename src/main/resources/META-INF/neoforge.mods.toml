@@ -1,0 +1,26 @@
+modLoader="javafml"
+loaderVersion="[4,)"
+license="MIT"
+
+[[mods]]
+modId="colormons"
+version="1.0.0"
+displayName="Colormons"
+description='''Colour your Cobblemon with a wheel: four groups, finishes, a custom layer and shared colours.'''
+
+[[mixins]]
+config="colormons.mixins.json"
+
+[[dependencies.colormons]]
+modId="neoforge"
+type="required"
+versionRange="[21.1,)"
+ordering="NONE"
+side="CLIENT"
+
+[[dependencies.colormons]]
+modId="cobblemon"
+type="required"
+versionRange="[1.8.0,)"
+ordering="AFTER"
+side="CLIENT"
