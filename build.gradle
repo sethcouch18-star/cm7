@@ -1,0 +1,31 @@
+plugins {
+    id 'java-library'
+    id 'net.neoforged.moddev' version '2.0.78'
+}
+
+version = "1.0.0"
+group = "com.example.colormons"
+base { archivesName = "colormons" }
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+
+repositories {
+    maven { url = "https://maven.impactdev.net/repository/development/" }
+    maven { url = "https://thedarkcolour.github.io/KotlinForForge/" }
+    mavenCentral()
+}
+
+neoForge {
+    version = "21.1.250"
+    runs {
+        client { client() }
+    }
+    mods {
+        colormons { sourceSet sourceSets.main }
+    }
+}
+
+dependencies {
+    implementation("com.cobblemon:neoforge:1.8.1+1.21.1") { transitive = false }
+    compileOnly "org.jetbrains.kotlin:kotlin-stdlib:2.2.0"
+}
